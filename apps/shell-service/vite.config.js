@@ -9,7 +9,7 @@ export default defineConfig({
       name: 'host',
       remotes: {
         commons: 'http://localhost:6969/remoteEntry.js',
-        reportService: 'http://localhost:3001/remoteEntry.js',
+        assetsService: 'http://localhost:3001/remoteEntry.js',
       },
       shared: ['vue'],
     }),

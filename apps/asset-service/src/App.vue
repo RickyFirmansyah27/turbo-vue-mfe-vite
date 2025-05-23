@@ -10,6 +10,6 @@
 
 <script>
 export default {
-  name: 'ReportApp'
+  name: 'App',
 }
 </script>
