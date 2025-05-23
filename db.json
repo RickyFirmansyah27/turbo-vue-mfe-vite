@@ -1,0 +1,113 @@
+{
+  "assets": [
+    {
+      "id": 1,
+      "name": "MacBook Pro 2023",
+      "category": "laptop",
+      "purchaseDate": "2023-04-15",
+      "status": "available",
+      "location": "IT Department"
+    },
+    {
+      "id": 2,
+      "name": "iPhone 14 Pro",
+      "category": "smartphone",
+      "purchaseDate": "2023-02-20",
+      "status": "borrowed",
+      "location": "Marketing Department"
+    },
+    {
+      "id": 3,
+      "name": "Dell XPS 15",
+      "category": "laptop",
+      "purchaseDate": "2022-11-05",
+      "status": "available",
+      "location": "Engineering Department"
+    },
+    {
+      "id": 4,
+      "name": "Samsung S23 Ultra",
+      "category": "smartphone",
+      "purchaseDate": "2023-03-10",
+      "status": "damaged",
+      "location": "IT Storage"
+    },
+    {
+      "id": 5,
+      "name": "Lenovo ThinkPad X1",
+      "category": "laptop",
+      "purchaseDate": "2022-09-18",
+      "status": "borrowed",
+      "location": "Finance Department"
+    },
+    {
+      "id": 6,
+      "name": "Honda Civic",
+      "category": "vehicle",
+      "purchaseDate": "2021-06-12",
+      "status": "available",
+      "location": "Company Garage"
+    },
+    {
+      "id": 7,
+      "name": "Logitech MX Master 3",
+      "category": "peripheral",
+      "purchaseDate": "2023-01-25",
+      "status": "available",
+      "location": "IT Department"
+    },
+    {
+      "id": 8,
+      "name": "Apple iPad Pro",
+      "category": "tablet",
+      "purchaseDate": "2022-12-03",
+      "status": "borrowed",
+      "location": "Design Department"
+    },
+    {
+      "id": 9,
+      "name": "Toyota Corolla",
+      "category": "vehicle",
+      "purchaseDate": "2020-08-17",
+      "status": "damaged",
+      "location": "Service Center"
+    },
+    {
+      "id": 10,
+      "name": "Dell UltraSharp Monitor",
+      "category": "monitor",
+      "purchaseDate": "2023-05-02",
+      "status": "available",
+      "location": "Engineering Department"
+    },
+    {
+      "id": 11,
+      "name": "Lenovo Legion Gaming Laptop",
+      "category": "laptop",
+      "purchaseDate": "2022-10-12",
+      "status": "borrowed",
+      "location": "Game Development Team"
+    },
+    {
+      "id": 12,
+      "name": "Google Pixel 7",
+      "category": "smartphone",
+      "purchaseDate": "2023-01-15",
+      "status": "available",
+      "location": "IT Department"
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "laptop" },
+    { "id": 2, "name": "smartphone" },
+    { "id": 3, "name": "tablet" },
+    { "id": 4, "name": "vehicle" },
+    { "id": 5, "name": "peripheral" },
+    { "id": 6, "name": "monitor" }
+  ],
+  "statuses": [
+    { "id": 1, "name": "available" },
+    { "id": 2, "name": "borrowed" },
+    { "id": 3, "name": "damaged" }
+  ]
+}

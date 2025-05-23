@@ -1,0 +1,17 @@
+/* this file is intended to make VS code Intellisense works when referencing module federation's remote module.
+attribute paths should be match with apps/commons/config/webpack.dev.js > ModuleFederationPlugin > exposes */
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "commons/Components": ["apps/commons/src/components/index"],
+      "commons/Utils": ["apps/commons/src/utils"],
+      "commons/Assets": ["apps/commons/src/assets/index"],
+      "commons/Theme": ["apps/commons/src/styles/theme"],
+      "commons/Api": ["apps/commons/src/hooks/api"],
+      "commons/ZustandStore": ["apps/commons/src/hooks/zustand/stores"],
+    }
+  },
+  "exclude": ["node_modules", "**/node_modules", "**/dist"]
+}
