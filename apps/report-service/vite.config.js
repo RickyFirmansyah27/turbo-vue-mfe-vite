@@ -1,25 +1,30 @@
-import { defineConfig } from 'vite'
-import vue2 from '@vitejs/plugin-vue2'
-import federation from '@originjs/vite-plugin-federation'
+import { defineConfig } from "vite";
+import vue2 from "@vitejs/plugin-vue2";
+import { federation } from "@module-federation/vite";
+import topLevelAwait from "vite-plugin-top-level-await";
 
 export default defineConfig({
   plugins: [
     vue2(),
     federation({
-      name: 'remote-app',
-      filename: 'remoteEntry.js',
+      name: "reportService",
+      filename: "remoteEntry.js",
       exposes: {
-        './AssetList': './src/views/AssetList.vue'
+        "./AssetList": "./src/views/AssetList.vue",
       },
-      shared: ['vue']
-    })
+      shared: ["vue"],
+    }),
+    topLevelAwait(),
   ],
-  build: {
-    target: 'es2015',
-    minify: false,
-    cssCodeSplit: true
-  },
   server: {
-    port: 3001
-  }
-})
+    port: 3001,
+    cors: true,
+  },
+  build: {
+    target: "esnext",
+    minify: false,
+  },
+  preview: {
+    port: 3001,
+  },
+});

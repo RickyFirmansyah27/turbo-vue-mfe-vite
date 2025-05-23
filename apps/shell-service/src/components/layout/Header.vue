@@ -1,6 +1,5 @@
 <template>
-  <header class="bg-white border-b border-gray-200 shadow-sm px-4 py-3 flex justify-between items-center">
-    <h1 class="text-xl font-semibold text-gray-800">Asset Management</h1>
+  <header class="bg-white border-b border-gray-200 shadow-sm px-4 py-3 flex items-center justify-between">
 
     <div class="relative" @click="toggleDropdown">
       <button class="flex items-center space-x-2 focus:outline-none">
@@ -36,6 +35,7 @@
     </div>
   </header>
 </template>
+
 
 <script>
 export default {
