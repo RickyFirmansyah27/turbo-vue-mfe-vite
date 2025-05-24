@@ -10,6 +10,7 @@ export default defineConfig({
       filename: 'remoteEntry.js',
       exposes: {
         './bootstrap': './src/main.js',
+        './AssetsList': './src/views/NotFound.vue',
       },
       remotes: {
         commons: 'http://localhost:6969/remoteEntry.js',

@@ -2,8 +2,6 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import NotFound from '../views/NotFound.vue'
 import Dashboard from '../views/Dashboard.vue'
-import RemoteAssetAdaptor from '../adaptor/assets-service.vue'
-import vueQueryClient from '../adaptor/queryClient'
 import { Checkpoints } from 'commons/Utils'
 
 Vue.use(VueRouter)
@@ -17,10 +15,7 @@ const routes = [
   {
     path: Checkpoints.assets,
     name: 'Assets',
-    component: RemoteAssetAdaptor, 
-    props: route => ({
-      vueQueryClient, 
-    }),
+    component: () => import('assetsService/AssetsList'),
   },
   {
     path: '*',
