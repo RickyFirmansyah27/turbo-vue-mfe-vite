@@ -1,20 +1,15 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import NotFound from '../views/NotFound.vue'
-
+import { Checkpoints } from 'commons/Utils'
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/service/assets',
+    path: Checkpoints.assets,
     name: 'Dashboard',
     component: NotFound
   },
-  {
-    path: '/service/*',
-    name: 'NotFound',
-    component: NotFound
-  }
 ]
 
 const router = new VueRouter({
