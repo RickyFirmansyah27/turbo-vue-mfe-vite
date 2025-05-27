@@ -5,6 +5,7 @@ import Dashboard from "../views/Dashboard.vue";
 import AssetList from "../views/AssetList.vue";
 import Transactions from "../views/Transactions.vue";
 import { Checkpoints } from "commons/Utils";
+import ReportList from "../views/ReportList.vue";
 
 Vue.use(VueRouter);
 
@@ -23,6 +24,11 @@ const routes = [
     path: Checkpoints.transactions,
     name: "Transactions",
     component: Transactions,
+  },
+    {
+    path: Checkpoints.reports,
+    name: "Reports",
+    component: ReportList,
   },
   {
     path: "*",
