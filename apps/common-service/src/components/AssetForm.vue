@@ -11,7 +11,7 @@
           required
         />
       </div>
-      
+
       <div>
         <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
         <select
@@ -26,7 +26,7 @@
           </option>
         </select>
       </div>
-      
+
       <div>
         <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
         <select
@@ -41,7 +41,7 @@
           </option>
         </select>
       </div>
-      
+
       <div>
         <label for="purchaseDate" class="block text-sm font-medium text-gray-700">Purchase Date</label>
         <input
@@ -52,7 +52,7 @@
           required
         />
       </div>
-      
+
       <div>
         <label for="location" class="block text-sm font-medium text-gray-700">Location</label>
         <input
@@ -64,7 +64,7 @@
         />
       </div>
     </div>
-    
+
     <div class="flex justify-end space-x-3">
       <button
         type="button"
@@ -85,9 +85,6 @@
 </template>
 
 <script>
-import { useQuery } from '@tanstack/vue-query'
-import api from '../../api'
-
 export default {
   name: 'AssetForm',
   props: {
@@ -101,6 +98,14 @@ export default {
         location: ''
       })
     },
+    categories: {
+      type: Array,
+      default: () => []
+    },
+    statuses: {
+      type: Array,
+      default: () => []
+    },
     submitButtonText: {
       type: String,
       default: 'Save Asset'
@@ -109,38 +114,10 @@ export default {
   data() {
     return {
       assetData: { ...this.initialData },
-      isSubmitting: false,
-      categories: [],
-      statuses: []
+      isSubmitting: false
     }
-  },
-  setup() {
-    const categoriesQuery = useQuery(['categories'], () => 
-      api.getCategories().then(response => response.data)
-    )
-    
-    const statusesQuery = useQuery(['statuses'], () => 
-      api.getStatuses().then(response => response.data)
-    )
-    
-    return {
-      categoriesQuery,
-      statusesQuery
-    }
-  },
-  mounted() {
-    this.fetchFormData()
   },
   methods: {
-    async fetchFormData() {
-      if (this.categoriesQuery.data) {
-        this.categories = this.categoriesQuery.data
-      }
-      
-      if (this.statusesQuery.data) {
-        this.statuses = this.statusesQuery.data
-      }
-    },
     submitForm() {
       this.isSubmitting = true
       this.$emit('submit', this.assetData, () => {

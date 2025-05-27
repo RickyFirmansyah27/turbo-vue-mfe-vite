@@ -72,12 +72,14 @@
 
 <script>
 import api from '../api';
+import AssetCard from 'commons/AssetCard';
+import FilterPanel from '../components/common/FilterPanel.vue';
 
 export default {
     name: 'AssetList',
     components: {
-        AssetCard: () => import('commons/AssetCard'),
-        FilterPanel: () => import('commons/FilterPanel'),
+        AssetCard,
+        FilterPanel,
         EmptyState: () => import('commons/EmptyState'),
         LoadingSpinner: () => import('commons/LoadingSpinner'),
         ConfirmDialog: () => import('commons/ConfirmDialog'),
