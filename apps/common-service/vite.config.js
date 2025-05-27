@@ -12,6 +12,12 @@ export default defineConfig({
       exposes: {
         './Utils': './src/utils',
         './Components': './src/components/index',
+        './AssetCard': './src/components/AssetCard.vue',
+        './AssetForm': './src/components/AssetForm.vue',
+        './FilterPanel': './src/components/FilterPanel.vue',
+        './LoadingSpinner': './src/components/LoadingSpinner.vue',
+        './EmptyState': './src/components/EmptyState.vue',
+        './ConfirmDialog': './src/components/ConfirmDialog.vue'
       },
       shared: ['vue']
     }),

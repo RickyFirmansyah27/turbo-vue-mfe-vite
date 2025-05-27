@@ -118,7 +118,7 @@
 <script>
 import { useQuery } from '@tanstack/vue-query'
 import api from '../api'
-import LoadingSpinner from '../components/LoadingSpinner.vue'
+import LoadingSpinner from '../components/common/LoadingSpinner.vue'
 
 export default {
   name: 'Dashboard',

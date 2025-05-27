@@ -5,7 +5,7 @@ export const Checkpoints = {
   homePage: '/homepage',
   reports: `${menuPrefix}/reports`,
   assets: `${menuPrefix}/assets`,
-  transaction: `${menuPrefix}/transaction`,
-  management: `${menuPrefix}/management`,
+  transactions: `${menuPrefix}/transactions`,
+  managements: `${menuPrefix}/managements`,
 };
 
